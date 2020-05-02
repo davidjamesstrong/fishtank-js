@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+</head>
+<body>
+    <script src="fishtank.js"></script>
+
+    <script type="text/javascript">
+        /*
+         * Go to the pet shop and buy three new fish.
+         */
+        jack = new Fish('Jack','Gold', 0.1);
+        harry = new Fish('Harry','Angel', 0.2);
+        thomas = new Fish('Thomas','Babel', 0.3);
+
+        /*
+         * Now we have all our new fish, we
+         * can put them in our new fish tank.
+         */
+        Tank = new Tank([
+            jack, harry, thomas
+        ]);
+
+        /*
+         * Basic testing via console.log
+         */
+        console.log(Tank);
+        console.log('Current you have ' + Tank.Fish + ' fish swimming in the tank.');
+        console.log('Total feed required is to keep all fish alive is ' + Tank.Feed + ' grams.');
+    </script>
+</body>
+</html>
