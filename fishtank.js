@@ -19,6 +19,7 @@ class Tank {
 
     get Feed() {
         let total = 0;
+
         /* iterate through each fish in the tank */
         for (let fish of this.fish) {
             /*
@@ -27,6 +28,7 @@ class Tank {
              */
             total = ( total + ( fish.portion * 10 ) );
         }
+
         /*
          * Divide by 10 to get correct value.
          */
