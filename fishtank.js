@@ -19,15 +19,24 @@ class Tank {
 
     get Feed() {
         let total = 0;
-
-        for (let f of this.fish) {
-            total = ( total + ( f.portion * 10 ) );
+        /* iterate through each fish in the tank */
+        for (let fish of this.fish) {
+            /*
+             * Add each fish' portion to the total multiply
+             * by 10 because JS is inaccurate with decimals.
+             */
+            total = ( total + ( fish.portion * 10 ) );
         }
-
+        /*
+         * Divide by 10 to get correct value.
+         */
         return ( total / 10 );
     }
 
     get Fish(){
+        /*
+         * We can easily get this by counting the fish in our tank.
+         */
         return this.fish.length;
     }
 }
